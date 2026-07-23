@@ -217,7 +217,7 @@ DELETE /gateway/maintenance/{id}
 The gateway simplifies client interaction by providing a single entry point instead of requiring clients to communicate directly with individual microservices.
 ---
 
-# 🔗 Inter-Service Communication
+# Inter-Service Communication
 
 The project uses **RestTemplate** for communication between microservices.
 
@@ -267,7 +267,7 @@ Smart-Electric-Grid-Monitoring-System
 
 ---
 
-# 🗄️ Database Design
+# Database Design
 
 Each microservice maintains its own independent database.
 
@@ -280,7 +280,7 @@ This follows the **Database per Microservice** architecture pattern.
 
 ---
 
-# ▶️ Running the Project
+# Running the Project
 
 Start the services in the following order:
 
@@ -340,4 +340,38 @@ The APIs were tested using **Postman**.
 - Automatic Transformer Status Updates
 - Maintenance Scheduling
 - Postman API Testing
+
+# OUTPUT
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 202639" src="https://github.com/user-attachments/assets/a35a435b-23e3-4991-8116-1a0786959601" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 202908" src="https://github.com/user-attachments/assets/e77edfdf-b123-4e9b-a22c-b403d2b4bb65" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 202943" src="https://github.com/user-attachments/assets/21e381ef-9de0-4fc7-8e35-516524391b9e" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 203134" src="https://github.com/user-attachments/assets/24659dd1-4a92-4e25-aa6d-573766ef1234" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 203516" src="https://github.com/user-attachments/assets/94d507ad-da8b-4b4f-a51f-014c85ca0bf7" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 203532" src="https://github.com/user-attachments/assets/e7a3ce1d-5142-4518-af45-c06cc9e162d7" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 203659" src="https://github.com/user-attachments/assets/ee575267-9315-4b8b-b4a9-a0b576ef5602" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 204740" src="https://github.com/user-attachments/assets/2df6742f-ccfa-4375-bb82-11618413752e" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 210134" src="https://github.com/user-attachments/assets/618fb99e-5f92-4a2a-9244-99879fc25eb4" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 205235" src="https://github.com/user-attachments/assets/c07c6da6-c771-4a3e-a551-1472265d42b2" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 205410" src="https://github.com/user-attachments/assets/6d8996df-4850-47cb-9f7d-cd3530f365ed" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 205530" src="https://github.com/user-attachments/assets/c35f79d2-adce-45ab-9d68-243eb5f05af1" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 205621" src="https://github.com/user-attachments/assets/bff3e551-3664-48ef-8b9e-e868bbebec7c" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 205745" src="https://github.com/user-attachments/assets/21773b04-a4af-400d-9f59-4a406507c217" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 205912" src="https://github.com/user-attachments/assets/7a3f23ce-c009-4f54-beba-4393fc277a4c" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-23 205941" src="https://github.com/user-attachments/assets/817a5f35-42b2-40d7-82d9-c0438aa64b30" />
+
 
