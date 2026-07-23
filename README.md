@@ -1,7 +1,4 @@
-# Smart-Electric-Grid-Monitoring-System
-Smart Electric Grid Monitoring System using Spring Boot Microservices to monitor transformer health, process sensor data, generate real-time alerts, schedule maintenance, and manage transformer operations through REST APIs, RestTemplate communication, MySQL, and API Gateway.
-
-# ⚡ Smart Electric Grid Monitoring System
+# Smart Electric Grid Monitoring System
 
 A **Spring Boot Microservices-based Smart Electric Grid Monitoring System** designed to monitor power transformers, collect real-time sensor readings, generate alerts, schedule maintenance activities, and manage transformer operations through REST APIs.
 
@@ -9,7 +6,7 @@ The project demonstrates a distributed microservices architecture using **Spring
 
 ---
 
-# 📖 Project Overview
+# Project Overview
 
 The Smart Electric Grid Monitoring System continuously monitors electrical transformers by collecting sensor readings such as **voltage, current, temperature, and load**.
 
@@ -26,7 +23,7 @@ Based on the collected sensor data, the system automatically:
 
 ---
 
-# 🏗️ System Architecture
+# System Architecture
 
 ```
                           Client
@@ -43,7 +40,7 @@ Transformer Service     Sensor Service             Alert Service          Mainte
 
 ---
 
-# 🔄 Project Workflow
+# Project Workflow
 
 ```
 Register Transformer
@@ -78,7 +75,7 @@ Restore Transformer Status
 
 ---
 
-# 🛠️ Technology Stack
+# Technology Stack
 
 - Java 17
 - Spring Boot
@@ -88,7 +85,6 @@ Restore Transformer Status
 - MySQL
 - Maven
 - RestTemplate
-- Spring Cloud Gateway
 - Bean Validation
 - SLF4J Logging
 - Global Exception Handling
@@ -97,7 +93,7 @@ Restore Transformer Status
 
 ---
 
-# 🚀 Microservices
+# Microservices
 
 ## 1. Transformer Service
 
@@ -191,17 +187,34 @@ DELETE /maintenance/{id}
 
 ## 5. API Gateway
 
-The API Gateway acts as the **single entry point** for all client requests.
+## API Gateway
 
-Configured Routes
+The API Gateway acts as the centralized entry point for client requests. It forwards incoming HTTP requests to the appropriate microservice using `RestTemplate`.
+
+### Gateway Endpoints
 
 ```
-/transformers/**
-/sensors/**
-/alerts/**
-/maintenance/**
+GET    /gateway/transformers
+POST   /gateway/transformers
+
+POST   /gateway/sensors/readings
+GET    /gateway/sensors/{transformerId}
+
+GET    /gateway/alerts
+POST   /gateway/alerts
+GET    /gateway/alerts/{id}
+PUT    /gateway/alerts/{id}/acknowledge
+PUT    /gateway/alerts/{id}/resolve
+
+GET    /gateway/maintenance
+POST   /gateway/maintenance
+GET    /gateway/maintenance/{id}
+PUT    /gateway/maintenance/{id}
+PUT    /gateway/maintenance/{id}/complete
+DELETE /gateway/maintenance/{id}
 ```
 
+The gateway simplifies client interaction by providing a single entry point instead of requiring clients to communicate directly with individual microservices.
 ---
 
 # 🔗 Inter-Service Communication
@@ -225,7 +238,7 @@ The project uses **RestTemplate** for communication between microservices.
 
 ---
 
-# 🚨 Alert Generation Rules
+# Alert Generation Rules
 
 | Condition | Alert Type | Priority |
 |-----------|------------|----------|
@@ -234,7 +247,7 @@ The project uses **RestTemplate** for communication between microservices.
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```
 Smart-Electric-Grid-Monitoring-System
@@ -291,7 +304,7 @@ GET http://localhost:8080/gateway/transformers
 
 ---
 
-# 🧪 Testing
+# Testing
 
 The APIs were tested using **Postman**.
 
@@ -308,7 +321,7 @@ The APIs were tested using **Postman**.
 
 ---
 
-# ✅ Features Implemented
+# Features Implemented
 
 - Spring Boot Microservices
 - REST APIs
@@ -328,15 +341,3 @@ The APIs were tested using **Postman**.
 - Maintenance Scheduling
 - Postman API Testing
 
----
-
-# 👨‍💻 Future Enhancements
-
-- Service Discovery using Eureka Server
-- Centralized Configuration using Spring Cloud Config
-- Circuit Breaker with Resilience4j
-- JWT Authentication & Authorization
-- Docker Containerization
-- Kubernetes Deployment
-- Monitoring with Prometheus & Grafana
-- Apache Kafka for asynchronous event-driven communication
